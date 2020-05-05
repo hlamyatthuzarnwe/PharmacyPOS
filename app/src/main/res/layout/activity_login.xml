@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context="com.whiteElephant.pharmacypos.activity.LoginActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_userInfoTitle_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="6dp">
+
+        <TextView
+            android:id="@+id/tvMain_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:padding="@dimen/dimen_8dp"
+            android:text="@string/tvMain_title"
+            android:textAlignment="center"
+            android:textColor="@color/rich_black"
+            android:textSize="@dimen/text_size_small"
+            android:textStyle="bold" />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_userInfo_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_userInfoTitle_login"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:elevation="2dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:id="@+id/ll_userInfo_login"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dimen_8dp"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_userName_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/til_user_name"
+                android:padding="@dimen/dimen_8dp"
+                android:textStyle="bold">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_password_login"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/til_password"
+                android:padding="@dimen/dimen_8dp"
+                android:textStyle="bold">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_btnLogin_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cv_userInfo_login"
+        android:layout_margin="@dimen/dimen_8dp"
+        android:background="@color/color_white"
+        android:elevation="2dp"
+        app:cardCornerRadius="6dp">
+
+        <LinearLayout
+            android:id="@+id/ll_btnRegister_register"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_white"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/rounded_shape_btn"
+                android:text="Login"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_forgotPwd_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:linksClickable="true"
+                android:textStyle="bold|italic" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>
